@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BuddyUp!</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+
+    <!---GOOGLE FONTS--->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chivo:400,900">
+
+    <!---INTERNAL STYLES--->
+    <style type=text/css> 
+        /*-----global styles-----*/ 
+        body { background: url("https://www.toptal.com/designers/subtlepatterns/patterns/stripes-light.png"); background-attachment: fixed; }
+        h1 { font-family: 'Chivo' , helvetica, arial, sans-serif;
+        font-weight: 900; font-style: italic; text-shadow: 5px 5px #444; } h2, h3, h4 { font-family: 'Chivo' ,
+        helvetica, arial, sans-serif; font-weight: 400; } .footer { background-color: #444; width: 100%; 
+        margin: auto; padding: 20px; text-align: center; border-radius: 6px; margin-bottom: 20px;} 
+        .footer a{ color: white; padding: 5px; }
+
+        /*-----survey.html styles------*/ 
+        #survey-header { background-color: rgb(199, 67, 67); padding: 40px 0 40px 0; margin-top: 20px; margin-bottom: 20px; } #survey-header-content {
+        text-align: center; margin: auto; color: white; } #survey-content { padding: 40px; background-color: rgb(235, 235, 235); border-radius: 6px; 
+        margin-bottom: 20px; } #input-field { width: 400px; } #submit-btn-container { text-align: center; margin: auto; } 
+        #submit { background-color: rgb(199, 67, 67); color: white; border: none; box-shadow: 5px 5px #444; width: 200px; } </style> 
+    </head> 
+    
+    <body>
+
+        <div class="container">
+
+        <div class="jumbotron" id="survey-header">
+            <div id="survey-header-content">
+                <h1>BuddyUp! Survey</h1>
+            </div>
+        </div>
+        <div id="survey-content">
+            <h3><strong>About You</strong></h3>
+            <h4>Your name (Required)</h4>
+            <input type="text" id="name input-field" class="form-control" required>
+
+            <h4>Submit a link to your photo (Required)</h4>
+            <input type="text" id="photo input-field" class="form-control" required>
+
+            <hr>
+
+            <h3><strong>Question 1</strong></h3>
+            <h4>If one could, they totally would.</h4>
+            <select class="chosen-select" id="q1">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3><strong>Question 2</strong></h3>
+            <h4>In most cases, up is most certainly probably always better than down.</h4>
+            <select class="chosen-select" id="q2">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h3><strong>Question 3</strong></h3>
+            <h4>The weather is decent today.</h4>
+            <select class="chosen-select" id="q3">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h3><strong>Question 4</strong></h3>
+            <h4>The cat's meow is more meaninful than the bee's knees.</h4>
+            <select class="chosen-select" id="q4">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h3><strong>Question 5</strong></h3>
+            <h4>Aardvark.</h4>
+            <select class="chosen-select" id="q5">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h3><strong>Question 6</strong></h3>
+            <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+            <select class="chosen-select" id="q6">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+
+            <h3><strong>Question 7</strong></h3>
+            <h4>One should not live a life of solitude, but instead a life surrounded by many different species of sea
+                creatures.</h4>
+            <select class="chosen-select" id="q7">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3><strong>Question 8</strong></h3>
+            <h4>Bueller... Bueller... Bueller...</h4>
+            <select class="chosen-select" id="q8">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3><strong>Question 9</strong></h3>
+            <h4>Pluto is in fact a planet. I don't what was discussed in Prague in August 2006!</h4>
+            <select class="chosen-select" id="q9">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+
+            <h3><strong>Question 10</strong></h3>
+            <h4>One does not simply walk into mordor...</h4>
+            <select class="chosen-select" id="q10">
+                <option value=""></option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div id="submit-btn-container">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+                    aria-hidden="true"></i>
+                <h4>Submit</h4>
+            </button>
+        </div>
+
+        <hr>
+
+        <footer class="footer">   
+                <p><a href="/api/buddies">API Buddy List</a> | <a href="#">GitHub Repo</a></p>
+        </footer>
+
+    </div>
+
+    <!-- Modal -->
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"><i class="fas fa-user-friends"></i> Meet your new Buddy!</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="your-buddy-name"></h2>
+                    <img id="your-buddy-photo" src="#" alt="Your new buddy's photo">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Chosen CSS
+        var config = {
+            ".chosen-select": {},
+            ".chosen-select-deselect": {
+                allow_single_deselect: true
+            },
+            ".chosen-select-no-single": {
+                disable_search_threshold: 10
+            },
+            ".chosen-select-no-results": {
+                no_results_text: "Oops, nothing found!"
+            },
+            ".chosen-select-width": {
+                width: "95%"
+            }
+        };
+
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+
+        // Capture the form inputs
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            // Form validation
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+
+                $(".chosen-select").each(function () {
+
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+
+            // If all required fields are filled
+            if (validateForm()) {
+                // Create an object for the user"s data
+                var userData = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+
+                // AJAX post the data to the friends API.
+                $.post("/api/buddies", userData, function (data) {
+
+                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                    $("#your-buddy-name").text(data.name);
+                    $("#your-buddy-photo").attr("src", data.photo);
+
+                    // Show the modal with the best match
+                    $("#results-modal").modal("toggle");
+
+                });
+            } else {
+                alert("Please fill out all fields before submitting!");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
