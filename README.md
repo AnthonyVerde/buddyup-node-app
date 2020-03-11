@@ -3,7 +3,7 @@
 
 ## Getting Started
 In order to use this app:
-* Clone repo to you machine
+* Clone repo to your machine
 * `npm install` all required dependencies:
     * https://www.npmjs.com/package/express
     * https://www.npmjs.com/package/path
